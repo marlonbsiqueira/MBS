@@ -5,37 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Premium finance, automation, and process transformation consulting for companies seeking efficiency, control, and scalable growth.">
-    <meta name="keywords" content="Finance Consulting, Automation Consulting, Process Improvement, Power BI, RPA, SAP, Business Transformation, CFO Advisory">
+    <meta name="description" content="Premium sales consulting, finance transformation, automation, dashboards and operational excellence for companies seeking scalable growth, stronger performance and executive-level decision support.">
+    <meta name="keywords" content="Sales Consulting, Revenue Growth, Finance Transformation, Automation, Process Improvement, Power BI, Dashboards, Business Transformation, Advisory">
     <meta name="author" content="Marlon B Siqueira">
 
-    <title>MBS Advisory | Finance, Automation & Transformation</title>
+    <title>MBS Advisory | Sales, Finance & Transformation Consulting</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/home.css?v=20">
+    <link rel="stylesheet" href="./styles/home.css">
 </head>
 <body>
 
+    <div class="site-bg" aria-hidden="true">
+        <span class="bg-orb orb-1"></span>
+        <span class="bg-orb orb-2"></span>
+        <span class="bg-grid"></span>
+    </div>
+
     <header id="header">
         <nav id="navbar" aria-label="Main navigation">
-            <a href="#home" class="logo-link" aria-label="Go to homepage">
-                <i class="fa-solid fa-chart-line" id="nav_logo" aria-hidden="true"></i>
+            <a href="#home" class="brand" aria-label="Go to homepage">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f5f7ff"></stop>
+                                <stop offset="100%" stop-color="#9bb2ff"></stop>
+                            </linearGradient>
+                        </defs>
+                        <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#brandGradient)" opacity="0.15"></rect>
+                        <path d="M20 40V24h4l8 9 8-9h4v16h-4V30.7l-8 8.7-8-8.7V40z" fill="url(#brandGradient)"></path>
+                    </svg>
+                </span>
+                <span class="brand-text">
+                    <strong>MBS Advisory</strong>
+                    <small>Sales & Transformation Consulting</small>
+                </span>
             </a>
 
             <ul id="nav_list">
                 <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#services">Services</a></li>
-                <li class="nav-item"><a href="#solutions">Solutions</a></li>
+                <li class="nav-item"><a href="#expertise">Expertise</a></li>
+                <li class="nav-item"><a href="#industries">Industries</a></li>
                 <li class="nav-item"><a href="#approach">Approach</a></li>
-                <li class="nav-item"><a href="#results">Results</a></li>
+                <li class="nav-item"><a href="#insights">Insights</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="#contact" class="btn-default nav-cta">Book a Consultation</a>
+            <a href="#contact" class="btn-default nav-cta">Schedule a Consultation</a>
 
             <button id="mobile_btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile_menu">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
@@ -45,247 +67,329 @@
         <div id="mobile_menu" aria-label="Mobile navigation">
             <ul id="mobile_nav_list">
                 <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#services">Services</a></li>
-                <li class="nav-item"><a href="#solutions">Solutions</a></li>
+                <li class="nav-item"><a href="#expertise">Expertise</a></li>
+                <li class="nav-item"><a href="#industries">Industries</a></li>
                 <li class="nav-item"><a href="#approach">Approach</a></li>
-                <li class="nav-item"><a href="#results">Results</a></li>
+                <li class="nav-item"><a href="#insights">Insights</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="#contact" class="btn-default">Book a Consultation</a>
+            <a href="#contact" class="btn-default mobile-cta">Schedule a Consultation</a>
         </div>
     </header>
 
     <main>
         <section id="home">
             <div id="cta" class="reveal left">
-                <span class="eyebrow">PREMIUM BUSINESS CONSULTING</span>
+                <span class="eyebrow">PREMIUM SALES & BUSINESS ADVISORY</span>
 
                 <h1 class="title">
-                    Finance, Automation & Process Transformation for Companies Ready to Scale.
+                    Advisory that strengthens revenue, modernizes execution, and elevates decision-making.
                 </h1>
 
                 <p class="description">
-                    We help organizations modernize finance operations, eliminate process waste, improve decision-making, and build scalable execution models through strategic advisory, intelligent automation, and performance-driven transformation.
+                    We help companies improve sales performance, redesign processes, strengthen finance visibility, and implement automation with an executive-grade approach focused on growth, control, and measurable business value.
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#contact" class="btn-default">Book a Consultation</a>
-                    <a href="#services" class="btn-secondary">Explore Services</a>
+                    <a href="#contact" class="btn-default">Schedule a Consultation</a>
+                    <a href="#expertise" class="btn-secondary">Explore Expertise</a>
                 </div>
 
                 <div class="hero-trust">
                     <div class="trust-item">
-                        <strong>12+</strong>
-                        <span>Years of experience</span>
+                        <strong>Revenue-Focused</strong>
+                        <span>Commercial improvement with strategic discipline</span>
                     </div>
                     <div class="trust-item">
-                        <strong>International</strong>
-                        <span>Europe & Americas</span>
+                        <strong>Finance + Operations</strong>
+                        <span>Integrated performance view for leadership teams</span>
                     </div>
                     <div class="trust-item">
-                        <strong>Finance + Tech</strong>
-                        <span>Strategic execution</span>
+                        <strong>Execution-Led</strong>
+                        <span>Practical transformation, not slide-only consulting</span>
                     </div>
                 </div>
             </div>
 
             <div id="banner" class="reveal right">
-                <img src="./images/Menu.png" alt="Finance and Automation Consulting">
+                <div class="hero-visual-frame">
+                    <img src="./images/menu.png" alt="Executive sales consulting and business transformation">
+                </div>
+
+                <div class="hero-floating-card card-top">
+                    <span>Strategic Sales Advisory</span>
+                    <strong>Growth with structure</strong>
+                </div>
+
+                <div class="hero-floating-card card-bottom">
+                    <span>Automation & Dashboards</span>
+                    <strong>Visibility for faster decisions</strong>
+                </div>
             </div>
         </section>
 
-        <section id="services">
+        <section class="trust-bar reveal">
+            <div class="trust-bar-inner">
+                <span>Executive Advisory</span>
+                <span>Sales Transformation</span>
+                <span>Finance Excellence</span>
+                <span>Automation Strategy</span>
+                <span>Performance Dashboards</span>
+                <span>Operational Discipline</span>
+            </div>
+        </section>
+
+        <section id="expertise">
             <div class="section-heading reveal">
-                <span class="section-tag">SERVICES</span>
-                <h2 class="section-title">Advisory Services Built for Operational and Financial Excellence</h2>
+                <span class="section-tag">EXPERTISE</span>
+                <h2 class="section-title">Advisory capabilities designed to improve growth, control and performance</h2>
                 <p class="section-description">
-                    Our consulting model is designed for companies that want stronger controls, faster reporting, scalable processes, and measurable business impact.
+                    A premium consulting model for companies that want stronger commercial execution, smarter reporting, leaner operations, and better leadership visibility.
                 </p>
             </div>
 
             <div class="cards-grid">
+                <article class="card image-card reveal left">
+                    <div class="card-media">
+                        <img src="./images/finance.jpg" alt="Finance and performance transformation">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Sales & Revenue Performance</h3>
+                        <p>Improve commercial discipline, pipeline visibility, decision frameworks and the routines that drive stronger sales execution.</p>
+                    </div>
+                </article>
+
+                <article class="card image-card reveal">
+                    <div class="card-media">
+                        <img src="./images/automation.png" alt="Business automation consulting">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Automation & Productivity</h3>
+                        <p>Reduce manual effort, increase speed and create more scalable operations through intelligent automation and workflow redesign.</p>
+                    </div>
+                </article>
+
+                <article class="card image-card reveal right">
+                    <div class="card-media">
+                        <img src="./images/dashboards.png" alt="Executive dashboards and analytics">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-icon"><i class="fa-solid fa-table-columns"></i></div>
+                        <h3>Dashboards & Executive Visibility</h3>
+                        <p>Turn business data into high-impact executive dashboards that support better prioritization and faster decisions.</p>
+                    </div>
+                </article>
+
                 <article class="card reveal left">
-                    <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                    <h3>Finance Transformation</h3>
-                    <p>Redesign finance processes, improve reporting quality, strengthen governance, and build decision-ready financial operations.</p>
+                    <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
+                    <h3>Process Redesign</h3>
+                    <p>Map the current reality, identify bottlenecks and redesign operating flows for higher efficiency and better governance.</p>
                 </article>
 
                 <article class="card reveal">
-                    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
-                    <h3>Intelligent Automation</h3>
-                    <p>Automate repetitive tasks with the right combination of RPA, Power Platform, VBA, Python, and workflow optimization.</p>
-                </article>
-
-                <article class="card reveal right">
-                    <div class="card-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
-                    <h3>Performance Improvement</h3>
-                    <p>Identify inefficiencies, remove bottlenecks, improve KPIs, and create high-performing operating routines across teams.</p>
-                </article>
-
-                <article class="card reveal left">
-                    <div class="card-icon"><i class="fa-solid fa-table-columns"></i></div>
-                    <h3>Dashboards & BI</h3>
-                    <p>Turn complex operational and financial data into executive dashboards that support faster, better decisions.</p>
-                </article>
-
-                <article class="card reveal">
-                    <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
-                    <h3>Process Mapping & Redesign</h3>
-                    <p>Map current workflows, uncover pain points, and create leaner, more resilient business processes.</p>
-                </article>
-
-                <article class="card reveal right">
                     <div class="card-icon"><i class="fa-solid fa-building-shield"></i></div>
-                    <h3>Controls & Governance</h3>
-                    <p>Support organizations in strengthening compliance, reporting discipline, accountability, and process ownership.</p>
+                    <h3>Governance & Control</h3>
+                    <p>Support leadership teams with stronger accountability, process ownership, reporting discipline and operational consistency.</p>
+                </article>
+
+                <article class="card reveal right">
+                    <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Transformation Execution</h3>
+                    <p>Move from diagnosis to implementation with practical delivery, stakeholder alignment and business-oriented prioritization.</p>
                 </article>
             </div>
         </section>
 
-        <section id="solutions">
+        <section id="industries">
             <div class="section-heading reveal">
-                <span class="section-tag">SOLUTIONS</span>
-                <h2 class="section-title">What We Help Companies Solve</h2>
+                <span class="section-tag">INDUSTRIES</span>
+                <h2 class="section-title">Business context matters — we bring a versatile, cross-sector perspective</h2>
             </div>
 
-            <div class="solutions-layout">
-                <div class="solutions-list reveal left">
-                    <div class="solution-item">
-                        <h3>Slow and manual reporting cycles</h3>
-                        <p>We streamline reporting flows and reduce manual effort so leadership gets accurate information faster.</p>
+            <div class="industries-grid">
+                <article class="industry-tile reveal left">
+                    <img src="./images/Stellantis.jpg" alt="Automotive and industrial operations consulting">
+                    <div class="industry-overlay">
+                        <h3>Industrial & Automotive</h3>
+                        <p>Transformation support for complex operations, reporting structures and performance environments.</p>
                     </div>
+                </article>
 
-                    <div class="solution-item">
-                        <h3>Disconnected finance and operations</h3>
-                        <p>We connect process, data, and accountability so businesses can operate with more clarity and control.</p>
+                <article class="industry-tile reveal">
+                    <img src="./images/vale.png" alt="Large scale operations and performance advisory">
+                    <div class="industry-overlay">
+                        <h3>Large-Scale Operations</h3>
+                        <p>Operational clarity, process discipline and management visibility for complex business ecosystems.</p>
                     </div>
+                </article>
 
-                    <div class="solution-item">
-                        <h3>Low-value repetitive work</h3>
-                        <p>We identify automation opportunities that free teams to focus on analysis, service, and strategic execution.</p>
+                <article class="industry-tile reveal right">
+                    <img src="./images/education.jpg" alt="Education and service organizations consulting">
+                    <div class="industry-overlay">
+                        <h3>Services & Education</h3>
+                        <p>Advisory for organizations seeking scalable service delivery, efficiency and stronger management routines.</p>
                     </div>
-
-                    <div class="solution-item">
-                        <h3>Unclear KPIs and poor visibility</h3>
-                        <p>We design dashboards and management routines that make performance visible and actionable.</p>
-                    </div>
-                </div>
-
-                <div class="highlight-panel reveal right">
-                    <h3>Core Expertise</h3>
-                    <ul>
-                        <li>Finance & Controlling</li>
-                        <li>Business Process Improvement</li>
-                        <li>RPA & Power Platform</li>
-                        <li>Management Reporting</li>
-                        <li>SAP / ERP Environments</li>
-                        <li>Continuous Improvement</li>
-                        <li>Executive Dashboards</li>
-                        <li>Scalable Operating Models</li>
-                    </ul>
-                </div>
+                </article>
             </div>
         </section>
 
         <section id="approach">
             <div class="section-heading reveal">
                 <span class="section-tag">APPROACH</span>
-                <h2 class="section-title">A Practical Consulting Approach Focused on Results</h2>
+                <h2 class="section-title">A consulting approach built around clarity, speed and measurable value</h2>
             </div>
 
-            <div class="approach-steps">
-                <div class="step reveal left">
-                    <span class="step-number">01</span>
-                    <h3>Assess</h3>
-                    <p>We evaluate your current processes, controls, tools, and pain points with a business-first perspective.</p>
+            <div class="approach-shell">
+                <div class="approach-steps">
+                    <div class="step reveal left">
+                        <span class="step-number">01</span>
+                        <h3>Diagnose</h3>
+                        <p>We assess your current sales, finance, reporting and process landscape to identify what is slowing growth or execution.</p>
+                    </div>
+
+                    <div class="step reveal">
+                        <span class="step-number">02</span>
+                        <h3>Prioritize</h3>
+                        <p>We define what matters most first: visibility, process redesign, automation, governance or leadership reporting.</p>
+                    </div>
+
+                    <div class="step reveal right">
+                        <span class="step-number">03</span>
+                        <h3>Implement</h3>
+                        <p>We execute with business realism, stakeholder alignment and a sharp focus on outcomes that leaders can actually feel.</p>
+                    </div>
+
+                    <div class="step reveal left">
+                        <span class="step-number">04</span>
+                        <h3>Scale</h3>
+                        <p>We help embed routines, dashboards and operating discipline so improvements are sustained and expanded over time.</p>
+                    </div>
                 </div>
 
-                <div class="step reveal">
-                    <span class="step-number">02</span>
-                    <h3>Design</h3>
-                    <p>We define the right process, governance, reporting model, and automation roadmap for your reality.</p>
-                </div>
-
-                <div class="step reveal right">
-                    <span class="step-number">03</span>
-                    <h3>Implement</h3>
-                    <p>We execute improvements with clarity, speed, and stakeholder alignment across finance and operations.</p>
-                </div>
-
-                <div class="step reveal left">
-                    <span class="step-number">04</span>
-                    <h3>Scale</h3>
-                    <p>We help your organization sustain gains, scale solutions, and build long-term operational maturity.</p>
+                <div class="approach-panel reveal right">
+                    <img src="./images/CI.png" alt="Continuous improvement and structured advisory">
+                    <div class="approach-panel-content">
+                        <span class="mini-label">Advisory Philosophy</span>
+                        <h3>Elegant strategy. Serious execution.</h3>
+                        <p>
+                            We combine executive perspective with hands-on delivery, creating a consulting experience that feels premium, focused and deeply practical.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="results">
+        <section id="insights">
             <div class="section-heading reveal">
-                <span class="section-tag">VALUE</span>
-                <h2 class="section-title">Why Companies Choose Us</h2>
+                <span class="section-tag">WHY MBS</span>
+                <h2 class="section-title">What clients value in our consulting style</h2>
             </div>
 
             <div class="results-grid">
                 <div class="result-box reveal left">
-                    <h3>Strategic + Hands-on</h3>
-                    <p>We combine executive thinking with practical execution, ensuring ideas become real operational improvements.</p>
+                    <h3>Commercial Lens</h3>
+                    <p>We do not treat process and reporting as isolated functions — they exist to support better growth decisions and stronger execution.</p>
                 </div>
 
                 <div class="result-box reveal">
-                    <h3>Cross-Functional Vision</h3>
-                    <p>We bridge finance, operations, systems, and reporting to solve problems from an end-to-end perspective.</p>
+                    <h3>Premium Positioning</h3>
+                    <p>Our approach is structured, polished and executive-ready, helping your business present itself with greater clarity and confidence.</p>
                 </div>
 
                 <div class="result-box reveal right">
-                    <h3>International Business Exposure</h3>
-                    <p>Experience across Europe and the Americas brings maturity, adaptability, and global business perspective.</p>
+                    <h3>Cross-Functional Strength</h3>
+                    <p>We connect finance, sales, operations and systems to solve the real causes of inefficiency rather than only the symptoms.</p>
                 </div>
 
                 <div class="result-box reveal left">
-                    <h3>Efficiency with Control</h3>
-                    <p>We improve speed and productivity without compromising governance, structure, or decision quality.</p>
+                    <h3>Hands-on Transformation</h3>
+                    <p>We stay close to implementation so change becomes operational reality, not just a strategic recommendation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase">
+            <div class="section-heading reveal">
+                <span class="section-tag">VISUAL SHOWCASE</span>
+                <h2 class="section-title">A premium consulting brand deserves visual authority</h2>
+            </div>
+
+            <div class="showcase-grid">
+                <div class="showcase-card large reveal left">
+                    <img src="./images/ale.png" alt="Business advisory visual identity">
+                </div>
+                <div class="showcase-card reveal">
+                    <img src="./images/meridian.png" alt="Corporate transformation consulting">
+                </div>
+                <div class="showcase-card reveal right">
+                    <img src="./images/renova.png" alt="Business process and sales consulting">
                 </div>
             </div>
         </section>
 
         <section class="contact" id="contact">
-            <div class="section-heading reveal">
-                <span class="section-tag">CONTACT</span>
-                <h2 class="section-title">Let’s Discuss Your Business Challenges</h2>
-                <p class="section-description">
-                    Whether you need finance transformation, automation, process redesign, or executive reporting support, we can help define the next step.
-                </p>
-            </div>
+            <div class="contact-layout">
+                <div class="contact-copy reveal left">
+                    <span class="section-tag">CONTACT</span>
+                    <h2 class="section-title">Let’s talk about your next stage of growth and transformation</h2>
+                    <p class="section-description">
+                        Whether you want to improve sales effectiveness, redesign processes, build better dashboards, or increase operating efficiency, we can structure the next move with clarity and executive-level focus.
+                    </p>
 
-            <form action="https://formsubmit.co/marlonbcsiqueira@gmail.com" method="POST" class="reveal">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="company" placeholder="Company">
-                <textarea name="message" rows="5" placeholder="Tell us about your project or challenge" required></textarea>
-                <button type="submit" class="btn-default">Request Consultation</button>
-            </form>
+                    <div class="contact-points">
+                        <div class="contact-point">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Premium positioning for modern companies</span>
+                        </div>
+                        <div class="contact-point">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Sales, finance and operations in one advisory lens</span>
+                        </div>
+                        <div class="contact-point">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Practical transformation with measurable business value</span>
+                        </div>
+                    </div>
 
-            <div class="contact-social reveal" aria-label="Contact social links">
-                <a href="https://www.linkedin.com/in/marlonbsiqueira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.youtube.com/@marlonbsiqueira468" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                </a>
+                    <div class="contact-social" aria-label="Contact social links">
+                        <a href="https://www.linkedin.com/in/marlonbsiqueira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@marlonbsiqueira468" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form action="https://formsubmit.co/marlonbcsiqueira@gmail.com" method="POST" class="contact-form reveal right">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New consultation request - MBS Advisory">
+                    <input type="text" name="name" placeholder="Full name" required>
+                    <input type="email" name="email" placeholder="Business email" required>
+                    <input type="text" name="company" placeholder="Company">
+                    <textarea name="message" rows="6" placeholder="Tell us about your challenge, goals, or project scope" required></textarea>
+                    <button type="submit" class="btn-default">Request Consultation</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>© 2026 MBS Advisory</p>
-            <p>Finance Transformation | Automation | Operational Excellence</p>
+            <div>
+                <strong>MBS Advisory</strong>
+                <p>Sales, Finance & Business Transformation Consulting</p>
+            </div>
+            <div class="footer-meta">
+                <p>© 2026 MBS Advisory</p>
+                <p>Elegant strategy. Serious execution.</p>
+            </div>
         </div>
     </footer>
 
