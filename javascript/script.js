@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updateActiveSection = () => {
         let currentSection = "";
-        const scrollPosition = window.scrollY + 160;
+        const scrollPosition = window.scrollY + 180;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
