@@ -136,7 +136,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
             footer_text_1: "Sales, Finance & Business Transformation Consulting",
             footer_text_2: "© 2026 MBS Advisory",
-            footer_text_3: "Elegant strategy. Serious execution."
+            footer_text_3: "Elegant strategy. Serious execution.",
+
+            nav_diagnostic: "Diagnostic",
+            diagnostic_tag: "BUSINESS DIAGNOSTIC",
+            diagnostic_title: "Where is your biggest opportunity right now?",
+            diagnostic_description: "Select the area where your business needs the most impact. We'll show you how MBS Advisory addresses it.",
+
+            diag_tab_1: "Finance & Control",
+            diag_tab_2: "Sales & Revenue",
+            diag_tab_3: "Governance",
+            diag_tab_4: "People & HR",
+            diag_tab_5: "Logistics",
+            diag_tab_6: "Service & Operations",
+            diag_tab_7: "Customer Experience",
+
+            diag_finance_title: "Is your financial data driving decisions — or just recording them?",
+            diag_finance_text: "Many companies have financial reports without financial intelligence. We redesign your reporting structure, strengthen budget control, and build dashboards that give leadership a real-time view of business health — transforming finance from a back-office function into a strategic decision engine.",
+            diag_finance_b1: "Budget management and cost control",
+            diag_finance_b2: "Executive financial dashboards",
+            diag_finance_b3: "Cash flow and variance analysis",
+            diag_finance_b4: "SOX / IFRS compliance frameworks",
+            diag_cta: "Talk to us about Finance",
+            diag_metric_finance: "Reduction in reporting cycle time",
+            diag_metric_finance_2: "Leadership visibility on key KPIs",
+
+            diag_sales_title: "Is your sales team executing with structure — or just reacting?",
+            diag_sales_text: "Revenue growth requires more than motivation. We bring commercial discipline: clear pipeline management, structured decision frameworks, and the routines that separate high-performing teams from average ones.",
+            diag_sales_b1: "Pipeline visibility and forecasting",
+            diag_sales_b2: "Commercial discipline and routines",
+            diag_sales_b3: "Sales performance frameworks",
+            diag_sales_b4: "Revenue reporting and KPI design",
+            diag_cta_sales: "Talk to us about Sales",
+            diag_metric_sales: "Average revenue improvement",
+            diag_metric_sales_2: "Pipeline visibility improvement",
+
+            diag_gov_title: "Do your processes have clear ownership — or do things fall through the cracks?",
+            diag_gov_text: "Governance is not bureaucracy — it is clarity. We help you define who owns what, how decisions are made, and how accountability flows across the organisation.",
+            diag_gov_b1: "Process ownership and accountability",
+            diag_gov_b2: "Decision-making frameworks",
+            diag_gov_b3: "Internal controls and compliance",
+            diag_gov_b4: "Reporting discipline and cadence",
+            diag_cta_gov: "Talk to us about Governance",
+            diag_metric_gov: "Reduction in process escalations",
+            diag_metric_gov_2: "Process ownership defined",
+
+            diag_hr_title: "Are your people processes enabling performance — or creating friction?",
+            diag_hr_text: "People operations are often the silent bottleneck. We help structure onboarding, performance tracking, and internal communication flows so your team spends less time on administration.",
+            diag_hr_b1: "Performance management frameworks",
+            diag_hr_b2: "Onboarding and process standardisation",
+            diag_hr_b3: "HR reporting and analytics",
+            diag_hr_b4: "Team efficiency and workload design",
+            diag_cta_hr: "Talk to us about People",
+            diag_metric_hr: "Admin time per team member",
+            diag_metric_hr_2: "Team productivity gain",
+
+            diag_log_title: "Is your supply chain delivering speed — or absorbing cost?",
+            diag_log_text: "Logistics inefficiencies compound silently. We map your current flow, identify waste at every handoff, and redesign the process to deliver speed, cost reduction, and visibility.",
+            diag_log_b1: "Supply chain process mapping",
+            diag_log_b2: "Lead time and cost reduction",
+            diag_log_b3: "Inventory and flow optimisation",
+            diag_log_b4: "Logistics KPI design",
+            diag_cta_log: "Talk to us about Logistics",
+            diag_metric_log: "Logistics cost reduction",
+            diag_metric_log_2: "Lead time improvement",
+
+            diag_svc_title: "Are your operations running efficiently — or just running?",
+            diag_svc_text: "Operational excellence is not about doing more — it is about eliminating what should not exist. We redesign service delivery processes, automate repetitive tasks, and build the management routines that make your operations consistent and scalable.",
+            diag_svc_b1: "Service delivery redesign",
+            diag_svc_b2: "Automation of repetitive workflows",
+            diag_svc_b3: "Operational KPI frameworks",
+            diag_svc_b4: "Standard operating procedures",
+            diag_cta_svc: "Talk to us about Operations",
+            diag_metric_svc: "Manual task reduction",
+            diag_metric_svc_2: "Service delivery speed",
+
+            diag_cx_title: "Is your customer journey building loyalty — or losing it quietly?",
+            diag_cx_text: "Customer experience is a business outcome, not a department. We help you map touchpoints, identify friction, and redesign the interactions that determine whether clients return, refer, or leave.",
+            diag_cx_b1: "Customer journey mapping",
+            diag_cx_b2: "Touchpoint friction analysis",
+            diag_cx_b3: "NPS and satisfaction framework design",
+            diag_cx_b4: "Retention and loyalty process design",
+            diag_cta_cx: "Talk to us about CX",
+            diag_metric_cx: "Customer satisfaction improvement",
+            diag_metric_cx_2: "Churn rate reduction",
+
+            approach_img_alt: "Elegant strategy and serious execution"
         },
 
         pt: {
@@ -259,7 +344,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
             footer_text_1: "Consultoria em Vendas, Finanças e Transformação de Negócios",
             footer_text_2: "© 2026 MBS Advisory",
-            footer_text_3: "Estratégia elegante. Execução séria."
+            footer_text_3: "Estratégia elegante. Execução séria.",
+
+            nav_diagnostic: "Diagnóstico",
+            diagnostic_tag: "DIAGNÓSTICO DE NEGÓCIO",
+            diagnostic_title: "Qual é a sua maior oportunidade agora?",
+            diagnostic_description: "Selecione a área onde o seu negócio precisa de mais impacto. Vamos mostrar como a MBS Advisory atua.",
+
+            diag_tab_1: "Finanças & Controle",
+            diag_tab_2: "Vendas & Receita",
+            diag_tab_3: "Governança",
+            diag_tab_4: "Pessoas & RH",
+            diag_tab_5: "Logística",
+            diag_tab_6: "Serviços & Operações",
+            diag_tab_7: "Experiência do Cliente",
+
+            diag_finance_title: "Os seus dados financeiros estão guiando decisões — ou apenas registando-as?",
+            diag_finance_text: "Muitas empresas têm relatórios financeiros sem inteligência financeira. Redesenhamos a sua estrutura de reporte, fortalecemos o controle orçamental e construímos dashboards que dão à liderança uma visão em tempo real da saúde do negócio.",
+            diag_finance_b1: "Gestão orçamental e controle de custos",
+            diag_finance_b2: "Dashboards financeiros executivos",
+            diag_finance_b3: "Análise de fluxo de caixa e variações",
+            diag_finance_b4: "Frameworks de compliance SOX / IFRS",
+            diag_cta: "Fale connosco sobre Finanças",
+            diag_metric_finance: "Redução no ciclo de reporte",
+            diag_metric_finance_2: "Visibilidade da liderança nos KPIs",
+
+            diag_sales_title: "A sua equipa de vendas executa com estrutura — ou apenas reage?",
+            diag_sales_text: "O crescimento de receita exige mais do que motivação. Trazemos disciplina comercial: gestão clara do pipeline, frameworks de decisão estruturados e as rotinas que separam equipas de alta performance das medianas.",
+            diag_sales_b1: "Visibilidade do pipeline e previsão",
+            diag_sales_b2: "Disciplina comercial e rotinas",
+            diag_sales_b3: "Frameworks de performance de vendas",
+            diag_sales_b4: "Reporting de receita e design de KPIs",
+            diag_cta_sales: "Fale connosco sobre Vendas",
+            diag_metric_sales: "Melhoria média de receita",
+            diag_metric_sales_2: "Melhoria na visibilidade do pipeline",
+
+            diag_gov_title: "Os seus processos têm responsáveis claros — ou as coisas ficam pelo caminho?",
+            diag_gov_text: "Governança não é burocracia — é clareza. Ajudamos a definir quem é responsável por quê, como as decisões são tomadas e como a accountability flui pela organização.",
+            diag_gov_b1: "Ownership de processos e accountability",
+            diag_gov_b2: "Frameworks de tomada de decisão",
+            diag_gov_b3: "Controles internos e compliance",
+            diag_gov_b4: "Disciplina de reporte e cadência",
+            diag_cta_gov: "Fale connosco sobre Governança",
+            diag_metric_gov: "Redução de escalações de processo",
+            diag_metric_gov_2: "Ownership de processos definido",
+
+            diag_hr_title: "Os seus processos de pessoas estão a impulsionar performance — ou a criar fricção?",
+            diag_hr_text: "As operações de pessoas são frequentemente o gargalo silencioso. Ajudamos a estruturar onboarding, acompanhamento de performance e fluxos de comunicação interna para que a equipa passe menos tempo em administração.",
+            diag_hr_b1: "Frameworks de gestão de performance",
+            diag_hr_b2: "Onboarding e padronização de processos",
+            diag_hr_b3: "Reporting e analytics de RH",
+            diag_hr_b4: "Eficiência da equipa e design de carga de trabalho",
+            diag_cta_hr: "Fale connosco sobre Pessoas",
+            diag_metric_hr: "Tempo administrativo por colaborador",
+            diag_metric_hr_2: "Ganho de produtividade da equipa",
+
+            diag_log_title: "A sua cadeia de abastecimento entrega velocidade — ou absorve custos?",
+            diag_log_text: "As ineficiências logísticas acumulam-se silenciosamente. Mapeamos o fluxo atual, identificamos desperdícios em cada transição e redesenhamos o processo para entregar velocidade, redução de custo e visibilidade.",
+            diag_log_b1: "Mapeamento da cadeia de abastecimento",
+            diag_log_b2: "Redução de lead time e custos",
+            diag_log_b3: "Otimização de inventário e fluxo",
+            diag_log_b4: "Design de KPIs logísticos",
+            diag_cta_log: "Fale connosco sobre Logística",
+            diag_metric_log: "Redução de custo logístico",
+            diag_metric_log_2: "Melhoria de lead time",
+
+            diag_svc_title: "As suas operações estão a funcionar com eficiência — ou apenas a funcionar?",
+            diag_svc_text: "Excelência operacional não é sobre fazer mais — é sobre eliminar o que não deveria existir. Redesenhamos processos de entrega de serviços, automatizamos tarefas repetitivas e construímos as rotinas de gestão que tornam as operações consistentes e escaláveis.",
+            diag_svc_b1: "Redesenho de entrega de serviços",
+            diag_svc_b2: "Automação de fluxos repetitivos",
+            diag_svc_b3: "Frameworks de KPIs operacionais",
+            diag_svc_b4: "Procedimentos operacionais padrão",
+            diag_cta_svc: "Fale connosco sobre Operações",
+            diag_metric_svc: "Redução de tarefas manuais",
+            diag_metric_svc_2: "Velocidade de entrega de serviços",
+
+            diag_cx_title: "A jornada do cliente está a construir fidelização — ou a perdê-la silenciosamente?",
+            diag_cx_text: "Experiência do cliente é um resultado de negócio, não um departamento. Ajudamos a mapear pontos de contato, identificar fricções e redesenhar as interações que determinam se os clientes voltam, recomendam ou partem.",
+            diag_cx_b1: "Mapeamento da jornada do cliente",
+            diag_cx_b2: "Análise de fricção nos touchpoints",
+            diag_cx_b3: "Design de frameworks de NPS e satisfação",
+            diag_cx_b4: "Design de processos de retenção e fidelização",
+            diag_cta_cx: "Fale connosco sobre CX",
+            diag_metric_cx: "Melhoria na satisfação do cliente",
+            diag_metric_cx_2: "Redução da taxa de churn",
+
+            approach_img_alt: "Estratégia elegante e execução séria"
         }
     };
 
@@ -359,7 +529,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => { syncHeader(); syncActive(); }, { passive: true });
 
-    /* ── Reveal on scroll — with stagger ──────────────── */
+    /* ── Reveal on scroll — with stagger ────────────────
+       Siblings inside the same parent reveal in cascade. */
     if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
@@ -384,6 +555,28 @@ document.addEventListener("DOMContentLoaded", () => {
         img.addEventListener("error", () => {
             img.style.opacity = "0";
             img.setAttribute("aria-hidden", "true");
+        });
+    });
+
+    /* ── Diagnostic tabs ─────────────────────────────── */
+    const diagTabs   = document.querySelectorAll(".diag-tab");
+    const diagPanels = document.querySelectorAll(".diag-panel");
+
+    diagTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            const target = tab.dataset.target;
+
+            diagTabs.forEach(t => {
+                t.classList.remove("active");
+                t.setAttribute("aria-selected", "false");
+            });
+            diagPanels.forEach(p => p.classList.remove("active"));
+
+            tab.classList.add("active");
+            tab.setAttribute("aria-selected", "true");
+
+            const panel = document.getElementById(target);
+            if (panel) panel.classList.add("active");
         });
     });
 
