@@ -551,12 +551,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ── Graceful image fallback ─────────────────────── */
-    document.querySelectorAll("img").forEach(img => {
-        img.addEventListener("error", () => {
-            img.style.opacity = "0";
-            img.setAttribute("aria-hidden", "true");
-        });
+   document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("error", () => {
+        img.classList.add("broken");
+        img.parentElement?.classList.add("has-fallback");
+        img.setAttribute("aria-hidden", "true");
     });
+});
 
     /* ── Diagnostic tabs ─────────────────────────────── */
     const diagTabs   = document.querySelectorAll(".diag-tab");
