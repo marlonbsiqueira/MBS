@@ -6,41 +6,33 @@
     align-items: center;
     gap: clamp(36px, 5vw, 80px);
     min-height: calc(100vh - 84px);
-    padding-top: 60px;
+    padding-top: 64px;
     padding-bottom: 80px;
 }
 
-/* ── CTA column ────────────────────────────────────── */
+/* ── CTA column ─────────────────────────────────────── */
 #cta {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    max-width: 680px;
+    display: flex; flex-direction: column;
+    gap: 28px; max-width: 680px;
 }
 
-/* ── Eyebrow ───────────────────────────────────────── */
+/* ── Eyebrow ────────────────────────────────────────── */
 .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 16px;
-    border-radius: 999px;
-    border: 1px solid rgba(27, 59, 255, 0.18);
-    background: rgba(27, 59, 255, 0.06);
-    color: #1B3BFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 7px 16px; border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--primary-dim);
+    color: var(--primary);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 0.12em; text-transform: uppercase;
     width: fit-content;
 }
 
 .eyebrow-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
+    width: 7px; height: 7px; border-radius: 50%;
     background: #00C2A8;
-    box-shadow: 0 0 10px rgba(0, 194, 168, 0.7);
+    box-shadow: 0 0 10px rgba(0,194,168,0.7);
     flex-shrink: 0;
     animation: pulse-dot 2.4s ease-in-out infinite;
 }
@@ -50,286 +42,164 @@
     50%       { opacity: 0.45; transform: scale(0.68); }
 }
 
-/* ── Hero title ────────────────────────────────────── */
+/* ── Hero title ─────────────────────────────────────── */
 #cta .title {
     font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(2.6rem, 4vw, 4.6rem);
-    line-height: 1.02;
-    letter-spacing: -0.04em;
-    font-weight: 700;
-    font-style: italic;
-    color: #0A1628;
-    max-width: 14ch;
-    margin: 0;
+    font-size: clamp(2.6rem, 4vw, 4.4rem);
+    line-height: 1.02; letter-spacing: -0.03em;
+    font-weight: 700; font-style: italic;
+    color: var(--text); max-width: 14ch; margin: 0;
 }
 
-/* ── Description ───────────────────────────────────── */
+/* ── Description ────────────────────────────────────── */
 #cta .description {
-    max-width: 600px;
-    font-size: 1.04rem;
-    line-height: 1.88;
-    color: #344466;
-    font-weight: 400;
+    max-width: 580px; font-size: 1.02rem;
+    line-height: 1.88; color: var(--text-2); font-weight: 400;
 }
 
-/* ── Hero actions ──────────────────────────────────── */
+/* ── Hero actions ───────────────────────────────────── */
 .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    align-items: center;
+    display: flex; flex-wrap: wrap;
+    gap: 14px; align-items: center;
 }
 
-/* ── Trust items ───────────────────────────────────── */
-.hero-trust {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 6px;
-}
+/* ── Trust items ────────────────────────────────────── */
+.hero-trust { display: flex; flex-direction: column; gap: 10px; }
 
 .trust-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 18px 20px;
-    background: rgba(255, 255, 255, 0.88);
-    border: 1px solid rgba(27, 59, 255, 0.09);
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(10, 22, 40, 0.06);
-    backdrop-filter: blur(8px);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border-card);
+    border-radius: 14px; box-shadow: var(--shadow-xs);
 }
 
 .trust-item:hover {
     transform: translateX(4px);
-    box-shadow: 0 6px 24px rgba(10, 22, 40, 0.09);
-    border-color: rgba(27, 59, 255, 0.16);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--border);
 }
 
 .trust-icon {
-    width: 38px; height: 38px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: rgba(27, 59, 255, 0.08);
-    border: 1px solid rgba(27, 59, 255, 0.13);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #1B3BFF;
-    font-size: 0.95rem;
-    margin-top: 1px;
+    width: 38px; height: 38px; flex-shrink: 0; border-radius: 10px;
+    background: var(--primary-dim); border: 1px solid var(--border-light);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--primary); font-size: 0.9rem; margin-top: 1px;
 }
 
 .trust-item strong {
-    display: block;
-    font-size: 0.93rem;
-    font-weight: 700;
-    color: #0A1628;
-    margin-bottom: 3px;
+    display: block; font-size: 0.9rem; font-weight: 700;
+    color: var(--text); margin-bottom: 3px;
 }
 
 .trust-item span {
-    font-size: 0.84rem;
-    color: #344466;
-    line-height: 1.5;
+    font-size: 0.82rem; color: var(--text-2); line-height: 1.5;
 }
 
-/* ── Banner column ─────────────────────────────────── */
+/* ── Banner column ──────────────────────────────────── */
 #banner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 580px;
+    position: relative; display: flex;
+    justify-content: center; align-items: center; min-height: 560px;
 }
 
-/* Ambient glow behind frame */
 #banner::before {
-    content: '';
-    position: absolute;
-    inset: 8% 5%;
-    border-radius: 40px;
-    background: radial-gradient(ellipse, rgba(27, 59, 255, 0.1) 0%, transparent 70%);
-    filter: blur(50px);
-    pointer-events: none;
-    z-index: 0;
+    content: ''; position: absolute; inset: 8% 5%; border-radius: 40px;
+    background: radial-gradient(ellipse, rgba(27,59,255,0.1) 0%, transparent 70%);
+    filter: blur(50px); pointer-events: none; z-index: 0;
 }
 
-/* ── Video frame ───────────────────────────────────── */
+/* ── Video frame ────────────────────────────────────── */
 .hero-visual-frame {
-    position: relative;
-    z-index: 1;
-    width: min(100%, 540px);
-    border-radius: 28px;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.88);
-    border: 1px solid rgba(27, 59, 255, 0.1);
-    box-shadow:
-        0 30px 80px rgba(10, 22, 40, 0.12),
-        0 0 0 1px rgba(255,255,255,0.8) inset;
-    backdrop-filter: blur(12px);
+    position: relative; z-index: 1;
+    width: min(100%, 520px); border-radius: 26px; padding: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-lg);
 }
 
 .hero-video {
-    width: 100%;
-    height: 560px;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
-    background: linear-gradient(135deg, #DBE4FF 0%, #F0F4FF 100%);
+    width: 100%; height: 540px;
+    object-fit: cover; border-radius: 18px; display: block;
+    background: linear-gradient(135deg, var(--blue-050) 0%, var(--blue-100) 100%);
 }
 
-/* ── Floating cards ────────────────────────────────── */
+/* ── Floating cards ─────────────────────────────────── */
 .hero-floating-card {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 220px;
-    padding: 16px 18px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(27, 59, 255, 0.1);
-    box-shadow: 0 16px 40px rgba(10, 22, 40, 0.12);
-    backdrop-filter: blur(18px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; z-index: 2;
+    display: flex; align-items: center; gap: 12px;
+    min-width: 216px; padding: 14px 16px; border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-md);
 }
 
 .hero-floating-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 20px 50px rgba(10, 22, 40, 0.16);
+    transform: translateY(-3px) !important;
+    box-shadow: var(--shadow-lg) !important;
 }
 
 .fc-icon {
-    width: 40px; height: 40px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: rgba(27, 59, 255, 0.08);
-    border: 1px solid rgba(27, 59, 255, 0.13);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #1B3BFF;
-    font-size: 1rem;
+    width: 38px; height: 38px; flex-shrink: 0; border-radius: 10px;
+    background: var(--primary-dim); border: 1px solid var(--border-light);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--primary); font-size: 0.95rem;
 }
 
 .hero-floating-card span {
-    display: block;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #7A8FB5;
-    margin-bottom: 3px;
+    display: block; font-size: 0.68rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-3); margin-bottom: 3px;
 }
 
 .hero-floating-card strong {
-    display: block;
-    font-size: 0.93rem;
-    font-weight: 700;
-    color: #0A1628;
-    line-height: 1.3;
+    display: block; font-size: 0.9rem; font-weight: 700;
+    color: var(--text); line-height: 1.3;
 }
 
-.card-top  { top: 72px;    right: -20px; }
-.card-bottom { bottom: 72px; left: -20px; }
+.card-top    { top: 60px;    right: -18px; }
+.card-bottom { bottom: 60px; left: -18px; }
 
-/* ── Responsive ────────────────────────────────────── */
+/* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 1200px) {
     #home { gap: 44px; }
     #cta .title { font-size: clamp(2.3rem, 3.8vw, 4rem); }
-    .hero-video { height: 500px; }
+    .hero-video { height: 480px; }
     .card-top  { right: 0; }
     .card-bottom { left: 0; }
 }
 
 @media (max-width: 1170px) {
     #home {
-        grid-template-columns: 1fr;
-        text-align: center;
-        min-height: auto;
-        gap: 40px;
-        padding-top: 44px;
-        padding-bottom: 56px;
+        grid-template-columns: 1fr; text-align: center;
+        min-height: auto; gap: 36px;
+        padding-top: 44px; padding-bottom: 56px;
     }
-
-    #cta {
-        align-items: center;
-        max-width: 760px;
-        margin: 0 auto;
-    }
-
-    #cta .title {
-        max-width: 13ch;
-        font-size: clamp(2.2rem, 7vw, 3.6rem);
-    }
-
+    #cta { align-items: center; max-width: 740px; margin: 0 auto; }
+    #cta .title { max-width: 13ch; font-size: clamp(2.2rem, 7vw, 3.6rem); }
     #cta .description { text-align: center; }
-
     .hero-actions { justify-content: center; }
     .eyebrow { align-self: center; }
-
-    .hero-trust {
-        width: 100%;
-        max-width: 520px;
-        align-self: center;
-        text-align: left;
-    }
-
-    #banner {
-        order: -1;
-        min-height: auto;
-    }
-
-    .hero-visual-frame { max-width: 480px; }
-    .hero-video { height: 460px; }
-
-    .hero-floating-card { position: static; margin-top: 12px; }
+    .hero-trust { width: 100%; max-width: 520px; align-self: center; text-align: left; }
+    #banner { order: -1; min-height: auto; flex-direction: column; align-items: center; gap: 0; }
+    .hero-visual-frame { max-width: 460px; }
+    .hero-video { height: 440px; }
+    .hero-floating-card { position: static; margin-top: 10px; }
     .card-top, .card-bottom { position: static; }
-
-    #banner {
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-    }
 }
 
 @media (max-width: 768px) {
     #home { gap: 28px; padding-top: 32px; padding-bottom: 44px; }
-
-    #cta .title {
-        font-size: clamp(2rem, 9vw, 3rem);
-        max-width: 100%;
-    }
-
+    #cta .title { font-size: clamp(2rem, 9vw, 3rem); max-width: 100%; }
     #cta .description { font-size: 0.97rem; }
-
-    .hero-visual-frame { padding: 10px; border-radius: 22px; }
-    .hero-video { height: 360px; border-radius: 16px; }
-
-    .hero-floating-card {
-        width: 100%;
-        min-width: 0;
-        text-align: left;
-    }
+    .hero-visual-frame { padding: 8px; border-radius: 20px; }
+    .hero-video { height: 360px; border-radius: 14px; }
+    .hero-floating-card { width: 100%; min-width: 0; text-align: left; }
 }
 
 @media (max-width: 480px) {
     #cta .title { font-size: 2.05rem; }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-    }
-
+    .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
     .hero-actions .btn-primary,
-    .hero-actions .btn-ghost {
-        width: 100%;
-        justify-content: center;
-    }
-
+    .hero-actions .btn-ghost { width: 100%; justify-content: center; }
     .hero-video { height: 280px; }
 }
