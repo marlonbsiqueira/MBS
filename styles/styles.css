@@ -1053,3 +1053,10 @@ footer {
 .consent-banner p { font-size: 0.88rem; line-height: 1.6; margin: 0; }
 .consent-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .consent-actions .btn-primary, .consent-actions .btn-ghost { padding: 10px 22px; font-size: 0.88rem; }
+
+/* Off-canvas reveal animations must never let the page pan sideways
+   (iOS Safari ignores overflow-x on <body> alone). `clip`, unlike
+   `hidden`, creates no scroll container, so position: sticky still works. */
+@supports (overflow: clip) {
+    html, body { overflow-x: clip; }
+}
