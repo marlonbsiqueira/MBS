@@ -23,6 +23,7 @@
     --blue-050: #F0F4FF;
     --teal:     #00C2A8;
     --teal-dim: rgba(0, 194, 168, 0.1);
+    --teal-ink: #00776A;   /* teal for text on light surfaces (WCAG AA) */
 
     /* Semantic surface tokens */
     --bg:          #ffffff;
@@ -84,6 +85,8 @@
     --text-2:      #A8B8D8;
     --text-3:      #6B82AA;
     --primary:     #5577FF;
+    --primary-ink: #7D97FF;   /* primary for small text on dark surfaces (AA) */
+    --teal-ink:    var(--teal);
     --primary-dim: rgba(85, 119, 255, 0.12);
     --border:      rgba(85, 119, 255, 0.2);
     --border-card: rgba(255, 255, 255, 0.07);
@@ -221,6 +224,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 [data-theme="dark"] .section-tag {
+    color: var(--primary-ink);
     background: rgba(85,119,255,0.12);
     border-color: rgba(85,119,255,0.2);
 }
@@ -323,7 +327,7 @@ input:focus-visible, textarea:focus-visible {
     white-space: nowrap;
 }
 
-.trust-bar-inner span i { font-size: 0.38rem; color: var(--teal); }
+.trust-bar-inner span i { font-size: 0.38rem; color: var(--teal-ink); }
 
 /* ── Results: metrics row ───────────────────────────── */
 .metrics-row {
@@ -414,7 +418,7 @@ input:focus-visible, textarea:focus-visible {
 .case-sector {
     font-size: 0.68rem; font-weight: 700;
     letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--teal);
+    color: var(--teal-ink);
 }
 
 .case-card h3 {
@@ -440,7 +444,7 @@ input:focus-visible, textarea:focus-visible {
     color: var(--text-3); margin-bottom: 6px;
 }
 
-.case-after .case-label { color: var(--teal); }
+.case-after .case-label { color: var(--teal-ink); }
 
 .case-col p {
     font-size: 0.84rem; color: var(--text-2); line-height: 1.7;
@@ -452,7 +456,7 @@ input:focus-visible, textarea:focus-visible {
     background: var(--bg-3);
     border-top: 1px solid var(--border-light);
     font-size: 0.82rem; font-weight: 600;
-    color: var(--teal);
+    color: var(--teal-ink);
 }
 
 .case-result i { font-size: 0.85rem; flex-shrink: 0; }
@@ -585,7 +589,7 @@ input:focus-visible, textarea:focus-visible {
     display: inline-block;
     font-size: 0.68rem; font-weight: 700;
     letter-spacing: 0.13em; text-transform: uppercase;
-    color: var(--teal); margin-bottom: 12px;
+    color: var(--teal-ink); margin-bottom: 12px;
 }
 
 .diag-text h3 {
@@ -744,7 +748,7 @@ input:focus-visible, textarea:focus-visible {
 
 .result-number {
     font-size: 0.68rem; font-weight: 700;
-    letter-spacing: 0.16em; color: var(--teal); margin-bottom: 14px;
+    letter-spacing: 0.16em; color: var(--teal-ink); margin-bottom: 14px;
 }
 
 .result-box h3 {
