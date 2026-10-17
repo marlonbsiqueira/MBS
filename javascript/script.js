@@ -40,12 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
             el.classList.remove(remove);
             el.classList.add(add);
         });
-        try { localStorage.setItem("mbsTheme", theme); } catch {}
     };
 
+    // only an explicit click is remembered — otherwise OS changes keep applying
     const toggleTheme = () => {
-        const current = htmlEl.getAttribute("data-theme") || "light";
-        applyTheme(current === "dark" ? "light" : "dark");
+        const next = (htmlEl.getAttribute("data-theme") || "light") === "dark" ? "light" : "dark";
+        try { localStorage.setItem("mbsTheme", next); } catch {}
+        applyTheme(next);
     };
 
     // Respect OS changes if user has no saved preference
@@ -270,6 +271,19 @@ document.addEventListener("DOMContentLoaded", () => {
             form_note:    "We respond within one business day. All conversations are strictly confidential.",
 
             footer_text_1: "Specialist Consulting · Revenue · Finance · Operations · Transformation",
+            footer_rights: "All rights reserved.",
+            skip_link: "Skip to main content",
+            cookie_settings: "Cookie preferences",
+            aria_theme: "Toggle dark mode",
+            aria_menu_open: "Open menu",
+            aria_menu_close: "Close menu",
+            form_sending: "Sending…",
+            form_success: "Thank you — your request has been sent. We will reply within one business day.",
+            form_error: "Sorry, the message could not be sent. Please try again or email email-removed.",
+            consent_text: "We use Google Analytics and Microsoft Clarity to understand how this site is used. They set cookies and only load if you accept.",
+            consent_accept: "Accept",
+            consent_reject: "Reject",
+            consent_label: "Cookie consent",
             footer_text_2: "© 2026 MBS Advisory. All rights reserved.",
             footer_text_3: "Elegant strategy. Serious execution."
         },
@@ -481,12 +495,25 @@ document.addEventListener("DOMContentLoaded", () => {
             form_note:    "Respondemos num prazo de um dia útil. Todas as conversas são estritamente confidenciais.",
 
             footer_text_1: "Consultoria Especialista · Receita · Finanças · Operações · Transformação",
+            footer_rights: "Todos os direitos reservados.",
+            skip_link: "Saltar para o conteúdo",
+            cookie_settings: "Preferências de cookies",
+            aria_theme: "Alternar modo escuro",
+            aria_menu_open: "Abrir menu",
+            aria_menu_close: "Fechar menu",
+            form_sending: "A enviar…",
+            form_success: "Obrigado — o seu pedido foi enviado. Respondemos no prazo de um dia útil.",
+            form_error: "Não foi possível enviar a mensagem. Tente novamente ou escreva para email-removed.",
+            consent_text: "Usamos Google Analytics e Microsoft Clarity para perceber como este site é utilizado. Estas ferramentas definem cookies e só são carregadas se aceitar.",
+            consent_accept: "Aceitar",
+            consent_reject: "Rejeitar",
+            consent_label: "Consentimento de cookies",
             footer_text_2: "© 2026 MBS Advisory. Todos os direitos reservados.",
             footer_text_3: "Estratégia elegante. Execução séria."
         }
     };
 
-    const applyTranslations = (lang) => {
+    const applyTranslations = (lang, updateUrl = true) => {
         const dict = T[lang] || T.en;
         htmlEl.lang = lang;
 
@@ -500,12 +527,35 @@ document.addEventListener("DOMContentLoaded", () => {
             if (v !== undefined) el.setAttribute("placeholder", v);
         });
 
-        langButtons.forEach(btn =>
-            btn.classList.toggle("active", btn.dataset.lang === lang)
-        );
+        document.querySelectorAll("[data-i18n-aria-label]").forEach(el => {
+            const v = dict[el.dataset.i18nAriaLabel];
+            if (v !== undefined) el.setAttribute("aria-label", v);
+        });
+
+        langButtons.forEach(btn => {
+            const on = btn.dataset.lang === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", String(on));
+        });
+
+        // shareable ?lang=pt link, matching the hreflang alternates in <head>
+        if (updateUrl) {
+            try {
+                const url = new URL(location.href);
+                if (lang === "en") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);
+                history.replaceState(null, "", url);
+            } catch {}
+        }
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+            const base = canonical.href.split("?")[0];
+            canonical.href = lang === "en" ? base : `${base}?lang=${lang}`;
+        }
 
         try { localStorage.setItem("mbsLang", lang); } catch {}
+        document.dispatchEvent(new CustomEvent("langchange", { detail: lang }));
     };
+    const t = (key) => (T[htmlEl.lang] || T.en)[key] ?? T.en[key] ?? "";
 
     langButtons.forEach(btn =>
         btn.addEventListener("click", () => applyTranslations(btn.dataset.lang))
@@ -529,7 +579,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const start = performance.now();
         const tick  = (now) => {
             const progress = Math.min((now - start) / duration, 1);
-            const value    = Math.round(easeOutQuart(progress) * target);
+            const value    = Math.round(target * (0.6 + 0.4 * easeOutQuart(progress)));
             el.textContent = prefix + value.toLocaleString() + suffix;
             if (progress < 1) requestAnimationFrame(tick);
         };
@@ -556,15 +606,25 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ══════════════════════════════════════════════════
        DIAGNOSTIC TABS
     ══════════════════════════════════════════════════ */
-    diagTabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            const target = tab.dataset.target;
-            diagTabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
-            diagPanels.forEach(p => p.classList.remove("active"));
-            tab.classList.add("active");
-            tab.setAttribute("aria-selected", "true");
-            const panel = document.getElementById(target);
-            if (panel) panel.classList.add("active");
+    const selectTab = (tab, focus) => {
+        diagTabs.forEach(x => {
+            const on = x === tab;
+            x.classList.toggle("active", on);
+            x.setAttribute("aria-selected", String(on));
+            x.tabIndex = on ? 0 : -1;
+        });
+        diagPanels.forEach(p => p.classList.toggle("active", p.id === tab.dataset.target));
+        if (focus) tab.focus();
+    };
+    const tabList = [...diagTabs];
+    tabList.forEach((tab, i) => {
+        tab.addEventListener("click", () => selectTab(tab));
+        tab.addEventListener("keydown", e => {
+            const n = tabList.length;
+            const to = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1, ArrowUp: i - 1, Home: 0, End: n - 1 }[e.key];
+            if (to === undefined) return;
+            e.preventDefault();
+            selectTab(tabList[(to + n) % n], true);
         });
     });
 
@@ -576,26 +636,27 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!mobileMenu || !mobileBtn) return;
         mobileMenu.classList.add("active");
         mobileBtn.setAttribute("aria-expanded", "true");
-        mobileBtn.setAttribute("aria-label", "Close menu");
+        mobileBtn.setAttribute("aria-label", t("aria_menu_close"));
         mobileIcon?.classList.replace("fa-bars", "fa-xmark");
         document.body.classList.add("menu-open");
     };
 
-    const closeMenu = () => {
-        if (!mobileMenu || !mobileBtn) return;
+    const closeMenu = ({ restoreFocus = false } = {}) => {
+        if (!mobileMenu || !mobileBtn || !mobileMenu.classList.contains("active")) return;
         mobileMenu.classList.remove("active");
         mobileBtn.setAttribute("aria-expanded", "false");
-        mobileBtn.setAttribute("aria-label", "Open menu");
+        mobileBtn.setAttribute("aria-label", t("aria_menu_open"));
         mobileIcon?.classList.replace("fa-xmark", "fa-bars");
         document.body.classList.remove("menu-open");
+        if (restoreFocus) mobileBtn.focus();
     };
 
     mobileBtn?.addEventListener("click", () =>
         mobileMenu?.classList.contains("active") ? closeMenu() : openMenu()
     );
-    allNavLinks.forEach(l => l.addEventListener("click", closeMenu));
+    allNavLinks.forEach(l => l.addEventListener("click", () => closeMenu()));
     document.addEventListener("keydown", e => {
-        if (e.key === "Escape" && mobileMenu?.classList.contains("active")) closeMenu();
+        if (e.key === "Escape") closeMenu({ restoreFocus: true });
     });
     window.addEventListener("resize", () => { if (window.innerWidth > 1170) closeMenu(); });
 
@@ -610,6 +671,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ══════════════════════════════════════════════════
        ACTIVE NAV
     ══════════════════════════════════════════════════ */
+    let activeId = null;
     const syncActive = () => {
         const pos = window.scrollY + 180;
         let current = sections[0]?.getAttribute("id") || "";
@@ -617,16 +679,23 @@ document.addEventListener("DOMContentLoaded", () => {
             if (pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight)
                 current = sec.getAttribute("id");
         });
+        if (current === activeId) return;
+        activeId = current;
         [desktopLinks, mobileLinks].forEach(list =>
             list.forEach(a => {
                 const active = a.getAttribute("href") === `#${current}`;
                 a.classList.toggle("active", active);
-                a.setAttribute("aria-current", active ? "page" : "false");
+                if (active) a.setAttribute("aria-current", "location"); else a.removeAttribute("aria-current");
             })
         );
     };
 
-    window.addEventListener("scroll", () => { syncHeader(); syncActive(); }, { passive: true });
+    let scrollQueued = false;
+    window.addEventListener("scroll", () => {
+        if (scrollQueued) return;
+        scrollQueued = true;
+        requestAnimationFrame(() => { syncHeader(); syncActive(); scrollQueued = false; });
+    }, { passive: true });
 
 
     /* ══════════════════════════════════════════════════
@@ -663,10 +732,113 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ══════════════════════════════════════════════════
        INIT
     ══════════════════════════════════════════════════ */
+    const urlLang = new URLSearchParams(location.search).get("lang");
     let savedLang = "en";
     try { savedLang = localStorage.getItem("mbsLang") || "en"; } catch {}
-    applyTranslations(savedLang in T ? savedLang : "en");
+    const initLang = urlLang || savedLang;
+    applyTranslations(initLang in T ? initLang : "en", Boolean(urlLang));
     syncHeader();
     syncActive();
+    const yearEl = document.getElementById("footer-year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+
+    /* ══════════════════════════════════════════════════
+       CONTACT FORM — sent in place (FormSubmit AJAX endpoint),
+       with a status message; plain POST still works without JS.
+    ══════════════════════════════════════════════════ */
+    const form = document.getElementById("contact-form");
+    if (form && window.fetch) {
+        const status = form.querySelector(".form-status");
+        const button = form.querySelector('button[type="submit"]');
+        const show = (key, isError) => {
+            status.hidden = false;
+            status.textContent = t(key);
+            status.classList.toggle("is-error", !!isError);
+        };
+        form.addEventListener("submit", async e => {
+            e.preventDefault();
+            if (form.elements._honey?.value) return; // bot
+            button.disabled = true;
+            show("form_sending");
+            try {
+                const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+                    method: "POST", headers: { Accept: "application/json" }, body: new FormData(form),
+                });
+                const data = await res.json().catch(() => ({}));
+                if (!res.ok || String(data.success) !== "true") throw new Error(data.message || res.status);
+                form.reset();
+                show("form_success");
+            } catch {
+                show("form_error", true);
+            } finally {
+                button.disabled = false;
+            }
+        });
+    }
+
+
+    /* ══════════════════════════════════════════════════
+       COOKIE CONSENT + ANALYTICS
+       Google Analytics and Microsoft Clarity set cookies, so under
+       GDPR/ePrivacy they only load after the visitor accepts.
+    ══════════════════════════════════════════════════ */
+    const GA_ID = "G-R473D8DKMB", CLARITY_ID = "wp0ls3ae27";
+    let analyticsLoaded = false;
+    const loadAnalytics = () => {
+        if (analyticsLoaded) return;
+        analyticsLoaded = true;
+        const ga = document.createElement("script");
+        ga.async = true; ga.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        document.head.appendChild(ga);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag("js", new Date());
+        window.gtag("config", GA_ID);
+        window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+        const cl = document.createElement("script");
+        cl.async = true; cl.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+        document.head.appendChild(cl);
+    };
+    const clearAnalyticsCookies = () => {
+        document.cookie.split(";").map(c => c.split("=")[0].trim())
+            .filter(n => /^(_ga|_gid|_clck|_clsk|CLID|MUID)/.test(n))
+            .forEach(n => [location.hostname, "." + location.hostname, ""].forEach(d => {
+                document.cookie = `${n}=; Max-Age=0; path=/;${d ? ` domain=${d};` : ""}`;
+            }));
+    };
+    const banner = document.createElement("div");
+    banner.className = "consent-banner";
+    banner.setAttribute("role", "region");
+    banner.hidden = true;
+    banner.innerHTML = `<p data-i18n="consent_text"></p>
+        <div class="consent-actions">
+            <button type="button" class="btn-primary" data-consent="granted" data-i18n="consent_accept"></button>
+            <button type="button" class="btn-ghost" data-consent="denied" data-i18n="consent_reject"></button>
+        </div>`;
+    document.body.appendChild(banner);
+    const labelBanner = () => {
+        banner.setAttribute("aria-label", t("consent_label"));
+        banner.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+    };
+    labelBanner();
+    document.addEventListener("langchange", labelBanner);
+    banner.addEventListener("click", e => {
+        const choice = e.target.closest("[data-consent]")?.dataset.consent;
+        if (!choice) return;
+        let previous = null;
+        try { previous = localStorage.getItem("mbsConsent"); localStorage.setItem("mbsConsent", choice); } catch {}
+        banner.hidden = true;
+        if (choice === "granted") loadAnalytics();
+        else if (previous === "granted") { clearAnalyticsCookies(); location.reload(); }
+    });
+    document.getElementById("cookie-settings")?.addEventListener("click", () => {
+        banner.hidden = false;
+        banner.querySelector("button")?.focus();
+    });
+    let consent = null;
+    try { consent = localStorage.getItem("mbsConsent"); } catch {}
+    if (consent === "granted") loadAnalytics();
+    else if (!consent) banner.hidden = false;
 
 });
