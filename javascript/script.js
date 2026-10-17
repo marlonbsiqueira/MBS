@@ -744,7 +744,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ══════════════════════════════════════════════════
-       CONTACT FORM — sent in place (FormSubmit AJAX endpoint),
+       CONTACT FORM — sent in place through the Web3Forms API,
        with a status message; plain POST still works without JS.
     ══════════════════════════════════════════════════ */
     const form = document.getElementById("contact-form");
@@ -758,11 +758,11 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         form.addEventListener("submit", async e => {
             e.preventDefault();
-            if (form.elements._honey?.value) return; // bot
+            if (form.elements.botcheck?.checked) return; // bot
             button.disabled = true;
             show("form_sending");
             try {
-                const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+                const res = await fetch(form.action, {
                     method: "POST", headers: { Accept: "application/json" }, body: new FormData(form),
                 });
                 const data = await res.json().catch(() => ({}));
