@@ -1,59 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="no-js">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="MBS Advisory is a specialist consulting firm helping CEOs and CFOs across Europe grow revenue, transform financial operations, and build execution-ready organisations. Book a complimentary 30-minute diagnostic.">
-    <meta name="keywords" content="Executive Consulting, Revenue Growth, Finance Transformation, Sales Advisory, Intelligent Automation, Process Redesign, Governance, Executive Dashboards, Power BI, SAP S/4HANA, Lean Six Sigma, Portugal, Europe, MBS Advisory">
     <meta name="author" content="MBS Advisory">
     <meta name="google-site-verification" content="qwn4_DEYix7YsDItMQQ9dDPumbLgB4ycpxMP916AqSM" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R473D8DKMB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-R473D8DKMB');
-    </script>
-
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wp0ls3ae27");
-    </script>
 
     <!-- Open Graph -->
     <meta property="og:type"        content="website">
     <meta property="og:title"       content="MBS Advisory | Specialist Consulting Firm · Revenue · Finance · Transformation">
     <meta property="og:description" content="MBS Advisory partners with senior leadership teams across Europe to drive revenue growth, transform financial operations, and build the execution discipline that high-performing organisations depend on.">
-    <meta property="og:image"       content="./images/og-cover.jpg">
-    <meta property="og:url"         content="https://mbsadvisory.com">
+    <meta property="og:image"       content="https://marlonbsiqueira.github.io/MBS/images/og-cover.jpg">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"   content="MBS Advisory — specialist consulting in revenue, finance and transformation">
+    <meta property="og:url"         content="https://marlonbsiqueira.github.io/MBS/">
+    <meta property="og:site_name"   content="MBS Advisory">
+    <meta property="og:locale"      content="en_GB">
+    <meta property="og:locale:alternate" content="pt_PT">
     <meta name="twitter:card"       content="summary_large_image">
     <meta name="twitter:title"      content="MBS Advisory | Revenue · Finance · Transformation Consulting">
     <meta name="twitter:description" content="Specialist consulting firm partnering with CEOs and CFOs to grow revenue, transform finance, and build execution-ready organisations. Europe & the Americas.">
-    <meta name="twitter:image"      content="./images/og-cover.jpg">
+    <meta name="twitter:image"      content="https://marlonbsiqueira.github.io/MBS/images/og-cover.jpg">
 
     <title>MBS Advisory | Specialist Consulting · Revenue · Finance · Transformation</title>
+    <link rel="canonical" href="https://marlonbsiqueira.github.io/MBS/">
+    <link rel="alternate" hreflang="en" href="https://marlonbsiqueira.github.io/MBS/">
+    <link rel="alternate" hreflang="pt" href="https://marlonbsiqueira.github.io/MBS/?lang=pt">
+    <link rel="alternate" hreflang="x-default" href="https://marlonbsiqueira.github.io/MBS/">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#1a2b8f">
+
+    <!-- Apply saved theme before first paint (no light→dark flash); mark JS as available -->
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.replace("no-js", "js");
+        try { var t = localStorage.getItem("mbsTheme"); if (t) d.setAttribute("data-theme", t); } catch (e) {}
+      })();
+    </script>
 
     <!-- Fonts: Fraunces (display), Plus Jakarta Sans (body) — properly loaded -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/icons.css">
 
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/home.css">
     <meta name="google-site-verification" content="FbOtLDEPnFqXokpT85q3Lr8juwd14maTz7eZwRSfOSs" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "MBS Advisory",
+      "url": "https://marlonbsiqueira.github.io/MBS/",
+      "logo": "https://marlonbsiqueira.github.io/MBS/favicon.svg",
+      "image": "https://marlonbsiqueira.github.io/MBS/images/og-cover.jpg",
+      "description": "Specialist consulting firm helping CEOs and CFOs grow revenue, transform financial operations and build execution-ready organisations.",
+      "email": "advisorymbs@gmail.com",
+      "areaServed": ["Europe", "Americas"],
+      "address": { "@type": "PostalAddress", "addressCountry": "PT" },
+      "founder": { "@type": "Person", "name": "Marlon B. Siqueira", "sameAs": "https://www.linkedin.com/in/marlonbsiqueira/" },
+      "knowsAbout": ["Revenue growth", "Finance transformation", "Intelligent automation", "Executive dashboards", "Process redesign", "Governance and internal controls", "Transformation programme management"]
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">Skip to main content</a>
 
     <div class="site-bg" aria-hidden="true">
         <span class="bg-orb orb-1"></span>
@@ -99,13 +117,13 @@
                     <button type="button" class="lang-btn active" data-lang="en">EN</button>
                     <button type="button" class="lang-btn" data-lang="pt">PT</button>
                 </div>
-                <button type="button" id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                <button type="button" id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode" data-i18n-aria-label="aria_theme">
                     <i class="fa-solid fa-moon" id="theme-icon"></i>
                 </button>
                 <a href="#contact" class="btn-primary nav-cta" data-i18n="nav_cta">Book a Discovery Call</a>
             </div>
 
-            <button id="mobile_btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile_menu">
+            <button id="mobile_btn" type="button" aria-label="Open menu" data-i18n-aria-label="aria_menu_open" aria-expanded="false" aria-controls="mobile_menu">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
         </nav>
@@ -124,7 +142,7 @@
                     <button type="button" class="lang-btn active" data-lang="en">EN</button>
                     <button type="button" class="lang-btn" data-lang="pt">PT</button>
                 </div>
-                <button type="button" id="theme-toggle-mobile" class="theme-btn" aria-label="Toggle dark mode">
+                <button type="button" id="theme-toggle-mobile" class="theme-btn" aria-label="Toggle dark mode" data-i18n-aria-label="aria_theme">
                     <i class="fa-solid fa-moon" id="theme-icon-mobile"></i>
                 </button>
             </div>
@@ -132,7 +150,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
 
         <!-- ═══════════ HERO ═══════════ -->
         <section id="home">
@@ -185,9 +203,10 @@
 
             <div id="banner" class="reveal right">
                 <div class="hero-visual-frame">
-                    <video autoplay muted loop playsinline class="hero-video" poster="./images/menu.png">
+                    <video autoplay muted loop playsinline class="hero-video" poster="./images/hero-poster.webp"
+                           width="480" height="854" preload="metadata" aria-hidden="true">
+                        <source src="./videos/hero-video.webm" type="video/webm">
                         <source src="./videos/hero-video.mp4" type="video/mp4">
-                        <img src="./images/menu.png" alt="MBS Advisory executive consulting" loading="eager">
                     </video>
                 </div>
 
@@ -232,22 +251,22 @@
             <!-- Animated metrics row -->
             <div class="metrics-row">
                 <div class="metric-block reveal">
-                    <span class="metric-value" data-target="40" data-suffix="%" data-prefix="–">0</span>
+                    <span class="metric-value" data-target="40" data-suffix="%" data-prefix="–">–40%</span>
                     <span class="metric-label" data-i18n="metric_1">Reduction in reporting cycle time</span>
                     <span class="metric-context" data-i18n="metric_1_ctx">Finance transformation · Automotive sector · EU</span>
                 </div>
                 <div class="metric-block reveal">
-                    <span class="metric-value" data-target="4000" data-suffix="+" data-prefix="">0</span>
+                    <span class="metric-value" data-target="4000" data-suffix="+" data-prefix="">4,000+</span>
                     <span class="metric-label" data-i18n="metric_2">Hours saved annually through automation</span>
                     <span class="metric-context" data-i18n="metric_2_ctx">RPA deployment · Multi-entity European operations</span>
                 </div>
                 <div class="metric-block reveal">
-                    <span class="metric-value" data-target="30" data-suffix="+" data-prefix="">0</span>
+                    <span class="metric-value" data-target="30" data-suffix="+" data-prefix="">30+</span>
                     <span class="metric-label" data-i18n="metric_3">European jurisdictions managed compliantly</span>
                     <span class="metric-context" data-i18n="metric_3_ctx">VAT &amp; tax compliance · Zero material audit findings</span>
                 </div>
                 <div class="metric-block reveal">
-                    <span class="metric-value" data-target="70" data-suffix="+" data-prefix="">0</span>
+                    <span class="metric-value" data-target="70" data-suffix="+" data-prefix="">70+</span>
                     <span class="metric-label" data-i18n="metric_4">Senior leaders receiving real-time dashboards</span>
                     <span class="metric-context" data-i18n="metric_4_ctx">Power BI deployment · Replaced manual reporting cycles</span>
                 </div>
@@ -331,7 +350,7 @@
             <div class="cards-grid">
                 <article class="card image-card reveal left">
                     <div class="card-media">
-                        <img src="./images/Sales.png" alt="Sales and revenue performance consulting" loading="lazy" width="600" height="210">
+                        <img src="./images/Sales.webp" alt="Sales and revenue performance consulting" loading="lazy" decoding="async" width="600" height="210">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
@@ -342,7 +361,7 @@
 
                 <article class="card image-card reveal">
                     <div class="card-media">
-                        <img src="./images/Automation1.png" alt="Business automation consulting" loading="lazy" width="600" height="210">
+                        <img src="./images/Automation1.webp" alt="Business automation consulting" loading="lazy" decoding="async" width="600" height="210">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
@@ -353,7 +372,7 @@
 
                 <article class="card image-card reveal right">
                     <div class="card-media">
-                        <img src="./images/Dashboards.jpg" alt="Executive dashboards and analytics" loading="lazy" width="600" height="210">
+                        <img src="./images/Dashboards.webp" alt="Executive dashboards and analytics" loading="lazy" decoding="async" width="600" height="210">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="fa-solid fa-chart-column"></i></div>
@@ -364,7 +383,7 @@
 
                 <article class="card image-card reveal left">
                     <div class="card-media">
-                        <img src="./images/ProcessRedesign.png" alt="Process redesign consulting" loading="lazy" width="600" height="210">
+                        <img src="./images/ProcessRedesign.webp" alt="Process redesign consulting" loading="lazy" decoding="async" width="600" height="210">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="fa-solid fa-arrows-spin"></i></div>
@@ -375,7 +394,7 @@
 
                 <article class="card image-card reveal">
                     <div class="card-media">
-                        <img src="./images/Governance.png" alt="Governance and control consulting" loading="lazy" width="600" height="210">
+                        <img src="./images/Governance.webp" alt="Governance and control consulting" loading="lazy" decoding="async" width="600" height="210">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
@@ -386,7 +405,7 @@
 
                 <article class="card image-card reveal right">
                     <div class="card-media">
-                        <img src="./images/Transformation1.png" alt="Transformation execution consulting" loading="lazy" width="600" height="210">
+                        <img src="./images/Transformation1.webp" alt="Transformation execution consulting" loading="lazy" decoding="async" width="600" height="210">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
@@ -407,18 +426,18 @@
 
             <div class="diagnostic-shell">
                 <div class="diagnostic-tabs" role="tablist" aria-label="Business area selector">
-                    <button class="diag-tab active" data-target="diag-finance"    role="tab" aria-selected="true"  data-i18n="diag_tab_1">Finance &amp; Control</button>
-                    <button class="diag-tab"         data-target="diag-sales"     role="tab" aria-selected="false" data-i18n="diag_tab_2">Sales &amp; Revenue</button>
-                    <button class="diag-tab"         data-target="diag-governance" role="tab" aria-selected="false" data-i18n="diag_tab_3">Governance</button>
-                    <button class="diag-tab"         data-target="diag-hr"        role="tab" aria-selected="false" data-i18n="diag_tab_4">People &amp; HR</button>
-                    <button class="diag-tab"         data-target="diag-logistics" role="tab" aria-selected="false" data-i18n="diag_tab_5">Logistics</button>
-                    <button class="diag-tab"         data-target="diag-service"   role="tab" aria-selected="false" data-i18n="diag_tab_6">Service &amp; Ops</button>
-                    <button class="diag-tab"         data-target="diag-customer"  role="tab" aria-selected="false" data-i18n="diag_tab_7">Customer Experience</button>
+                    <button type="button" class="diag-tab active" data-target="diag-finance"    role="tab" id="tab-finance" aria-controls="diag-finance" aria-selected="true" tabindex="0"  data-i18n="diag_tab_1">Finance &amp; Control</button>
+                    <button type="button" class="diag-tab"         data-target="diag-sales"     role="tab" id="tab-sales" aria-controls="diag-sales" aria-selected="false" tabindex="-1" data-i18n="diag_tab_2">Sales &amp; Revenue</button>
+                    <button type="button" class="diag-tab"         data-target="diag-governance" role="tab" id="tab-governance" aria-controls="diag-governance" aria-selected="false" tabindex="-1" data-i18n="diag_tab_3">Governance</button>
+                    <button type="button" class="diag-tab"         data-target="diag-hr"        role="tab" id="tab-hr" aria-controls="diag-hr" aria-selected="false" tabindex="-1" data-i18n="diag_tab_4">People &amp; HR</button>
+                    <button type="button" class="diag-tab"         data-target="diag-logistics" role="tab" id="tab-logistics" aria-controls="diag-logistics" aria-selected="false" tabindex="-1" data-i18n="diag_tab_5">Logistics</button>
+                    <button type="button" class="diag-tab"         data-target="diag-service"   role="tab" id="tab-service" aria-controls="diag-service" aria-selected="false" tabindex="-1" data-i18n="diag_tab_6">Service &amp; Ops</button>
+                    <button type="button" class="diag-tab"         data-target="diag-customer"  role="tab" id="tab-customer" aria-controls="diag-customer" aria-selected="false" tabindex="-1" data-i18n="diag_tab_7">Customer Experience</button>
                 </div>
 
                 <div class="diagnostic-panels">
 
-                    <div class="diag-panel active" id="diag-finance" role="tabpanel">
+                    <div class="diag-panel active" id="diag-finance" role="tabpanel" aria-labelledby="tab-finance" tabindex="0">
                         <div class="diag-content">
                             <div class="diag-text">
                                 <span class="diag-label" data-i18n="diag_tab_1">Finance &amp; Control</span>
@@ -447,7 +466,7 @@
                         </div>
                     </div>
 
-                    <div class="diag-panel" id="diag-sales" role="tabpanel">
+                    <div class="diag-panel" id="diag-sales" role="tabpanel" aria-labelledby="tab-sales" tabindex="0">
                         <div class="diag-content">
                             <div class="diag-text">
                                 <span class="diag-label" data-i18n="diag_tab_2">Sales &amp; Revenue</span>
@@ -476,7 +495,7 @@
                         </div>
                     </div>
 
-                    <div class="diag-panel" id="diag-governance" role="tabpanel">
+                    <div class="diag-panel" id="diag-governance" role="tabpanel" aria-labelledby="tab-governance" tabindex="0">
                         <div class="diag-content">
                             <div class="diag-text">
                                 <span class="diag-label" data-i18n="diag_tab_3">Governance</span>
@@ -505,7 +524,7 @@
                         </div>
                     </div>
 
-                    <div class="diag-panel" id="diag-hr" role="tabpanel">
+                    <div class="diag-panel" id="diag-hr" role="tabpanel" aria-labelledby="tab-hr" tabindex="0">
                         <div class="diag-content">
                             <div class="diag-text">
                                 <span class="diag-label" data-i18n="diag_tab_4">People &amp; HR</span>
@@ -534,7 +553,7 @@
                         </div>
                     </div>
 
-                    <div class="diag-panel" id="diag-logistics" role="tabpanel">
+                    <div class="diag-panel" id="diag-logistics" role="tabpanel" aria-labelledby="tab-logistics" tabindex="0">
                         <div class="diag-content">
                             <div class="diag-text">
                                 <span class="diag-label" data-i18n="diag_tab_5">Logistics</span>
@@ -563,7 +582,7 @@
                         </div>
                     </div>
 
-                    <div class="diag-panel" id="diag-service" role="tabpanel">
+                    <div class="diag-panel" id="diag-service" role="tabpanel" aria-labelledby="tab-service" tabindex="0">
                         <div class="diag-content">
                             <div class="diag-text">
                                 <span class="diag-label" data-i18n="diag_tab_6">Service &amp; Operations</span>
@@ -592,7 +611,7 @@
                         </div>
                     </div>
 
-                    <div class="diag-panel" id="diag-customer" role="tabpanel">
+                    <div class="diag-panel" id="diag-customer" role="tabpanel" aria-labelledby="tab-customer" tabindex="0">
                         <div class="diag-content">
                             <div class="diag-text">
                                 <span class="diag-label" data-i18n="diag_tab_7">Customer Experience</span>
@@ -658,7 +677,7 @@
 
                 <div class="approach-panel reveal right">
                     <div class="approach-panel-img-wrap">
-                        <img src="./images/Elegant.png" alt="Elegant strategy and serious execution" loading="lazy" width="600" height="280">
+                        <img src="./images/Elegant.webp" alt="Elegant strategy and serious execution" loading="lazy" width="600" height="280">
                     </div>
                     <div class="approach-panel-content">
                         <span class="section-tag" data-i18n="approach_panel_label">Our Advisory Philosophy</span>
@@ -747,10 +766,12 @@
                     </div>
                 </div>
 
-                <form action="https://formsubmit.co/advisorymbs@gmail.com" method="POST" class="contact-form reveal right">
+                <form action="https://formsubmit.co/advisorymbs@gmail.com" method="POST" class="contact-form reveal right" id="contact-form">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="New consultation request - MBS Advisory">
-                    <input type="hidden" name="_next" value="https://mbsadvisory.com/#contact">
+                    <input type="hidden" name="_next" value="https://marlonbsiqueira.github.io/MBS/#contact">
+                    <!-- spam trap: real visitors never see or fill this -->
+                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
 
                     <div class="form-row">
                         <div class="form-field">
@@ -775,6 +796,7 @@
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>
                     <p class="form-note" data-i18n="form_note">We respond within one business day. All conversations are strictly confidential.</p>
+                    <p class="form-status" role="status" aria-live="polite" hidden></p>
                 </form>
             </div>
         </section>
@@ -795,13 +817,14 @@
                 <a href="#contact"    data-i18n="nav_contact">Contact</a>
             </div>
             <div class="footer-meta">
-                <p data-i18n="footer_text_2">© 2026 MBS Advisory. All rights reserved.</p>
+                <p>© <span id="footer-year">2026</span> MBS Advisory. <span data-i18n="footer_rights">All rights reserved.</span></p>
+                <p><button type="button" class="footer-cookie-link" id="cookie-settings" data-i18n="cookie_settings">Cookie preferences</button></p>
                 <p class="footer-tagline" data-i18n="footer_text_3">Elegant strategy. Serious execution.</p>
                 <p class="footer-email"><a href="mailto:advisorymbs@gmail.com">advisorymbs@gmail.com</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="./javascript/script.js"></script>
+    <script src="./javascript/script.js" defer></script>
 </body>
 </html>
