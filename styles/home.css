@@ -150,7 +150,7 @@
 .hero-floating-card span {
     display: block; font-size: 0.68rem; font-weight: 800;
     letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--text-3); margin-bottom: 3px;
+    color: var(--text-2); margin-bottom: 3px;
 }
 
 .hero-floating-card strong {
@@ -196,6 +196,10 @@
     .hero-visual-frame { padding: 8px; border-radius: 20px; }
     .hero-video { height: 360px; border-radius: 14px; }
     .hero-floating-card { width: 100%; min-width: 0; text-align: left; }
+    /* phones: the message and the call to action come first, the visual
+       follows (it pushed the headline below the fold) */
+    #banner { order: 0; }
+    .hero-video { height: 300px; }
 }
 
 @media (max-width: 480px) {
